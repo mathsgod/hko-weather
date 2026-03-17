@@ -47,6 +47,7 @@ Each entry in the returned array contains:
 | `forecastWind` | Wind description |
 | `forecastWeather` | Weather description |
 | `forecastIcon` | Weather icon code |
+| `forecastIconUrl` | Weather icon image URL (PNG) |
 
 Returns 9 days of forecast data.
 

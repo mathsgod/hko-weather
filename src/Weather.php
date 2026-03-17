@@ -12,6 +12,7 @@ class Weather
         $data = json_decode(file_get_contents($url), true);
 
         return array_map(function ($d) {
+            $icon = $d["ForecastIcon"];
             return [
                 "date"            => substr($d["forecastDate"], 0, 4) . "-" . substr($d["forecastDate"], 4, 2) . "-" . substr($d["forecastDate"], 6, 2),
                 "low"             => $d["forecastMintemp"]["value"],
@@ -19,7 +20,8 @@ class Weather
                 "unit"            => $d["forecastMaxtemp"]["unit"],
                 "forecastWind"    => $d["forecastWind"],
                 "forecastWeather" => $d["forecastWeather"],
-                "forecastIcon"    => $d["ForecastIcon"],
+                "forecastIcon"    => $icon,
+                "forecastIconUrl" => "https://www.hko.gov.hk/images/HKOWxIconOutline/pic{$icon}.png",
             ];
         }, $data["weatherForecast"]);
     }

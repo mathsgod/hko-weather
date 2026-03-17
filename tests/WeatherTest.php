@@ -25,6 +25,18 @@ final class WeatherTest extends TestCase
         $this->assertArrayHasKey('forecastWind', $entry);
         $this->assertArrayHasKey('forecastWeather', $entry);
         $this->assertArrayHasKey('forecastIcon', $entry);
+        $this->assertArrayHasKey('forecastIconUrl', $entry);
+    }
+
+    public function test_fetch_icon_url_format(): void
+    {
+        $w = new Weather();
+        $entry = $w->fetch()[0];
+
+        $this->assertMatchesRegularExpression(
+            '#^https://www\.hko\.gov\.hk/images/HKOWxIconOutline/pic\d+\.png$#',
+            $entry['forecastIconUrl']
+        );
     }
 
     public function test_fetch_date_format(): void
