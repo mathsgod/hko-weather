@@ -65,6 +65,7 @@ Array
             [forecastWind] => East force 2 to 3.
             [forecastWeather] => Mainly cloudy. One or two light rain patches at first. Warm with sunny periods during the day.
             [forecastIcon] => 51
+            [forecastIconUrl] => https://www.hko.gov.hk/images/HKOWxIconOutline/pic51.png
         )
 
     [1] => Array
@@ -76,6 +77,7 @@ Array
             [forecastWind] => Light winds force 2.
             [forecastWeather] => Sunny periods. Coastal fog in the morning. Rather warm during the day.
             [forecastIcon] => 83
+            [forecastIconUrl] => https://www.hko.gov.hk/images/HKOWxIconOutline/pic83.png
         )
 
     ...
