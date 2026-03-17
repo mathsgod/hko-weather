@@ -1,0 +1,25 @@
+{
+    "name": "mathsgod/hko-weather",
+    "description": "Hong Kong Observatory weather forecast data fetcher",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Raymond Chong",
+            "email": "raymond@hostlink.com.hk"
+        }
+    ],
+    "require": {
+        "php": ">=8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "HKO\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit tests"
+    }
+}
